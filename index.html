@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday – Kalkidan Tesfaye</title>
+  <link rel="stylesheet" href="/Kalkidan.css"/>
+</head>
+<body>
+
+<div class="controls">
+  <button id="modeToggle">🌙</button>
+  <button id="soundToggle">🎵</button>
+  <select id="langSelect">
+    <option value="en">EN</option>
+    <option value="am">AM</option>
+  </select>
+  <button id="downloadBtn">⬇️</button>
+</div>
+
+<div class="card-wrapper" id="capture">
+  <svg id="card" viewBox="0 0 400 600">
+
+    <defs>
+      <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#b7dcff"/>
+        <stop offset="100%" stop-color="#f6b6d8"/>
+      </linearGradient>
+    </defs>
+
+    <rect width="400" height="600" rx="28" fill="url(#bgGradient)" />
+
+    <!-- Fireworks -->
+    <g id="fireworks-layer"></g>
+
+    <!-- Text -->
+    <text x="200" y="130" text-anchor="middle" class="title" id="titleText">
+      Happy Birthday dear 💕 
+    </text>
+
+    <text x="200" y="200" text-anchor="middle" class="name reveal" id="nameText">
+      Kalkidan Tesfaye
+    </text>
+
+    <text x="200" y="260" text-anchor="middle" class="message" id="msgText">
+      May your day be filled with joy my love 😊 ✨
+    </text>
+
+    <!-- Graphics -->
+    <image href="assets/cake.svg" x="135" y="300" width="130"/>
+    <image href="/IMG_20260301_223558_295.jpg" x="100" y="330" width="250"/>
+
+    <!-- Button -->
+    <g id="celebrate-btn">
+      <rect x="110" y="500" rx="24" width="180" height="52"/>
+      <text x="200" y="533" text-anchor="middle">Celebrate 🎆</text>
+    </g>
+
+  </svg>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="/Copy ኢሳያስ_ታምራት___Kifu_Aynkash_(ክፉ_አይንካሽ)___Bireman(128k).m4a" type="audio/mpeg">
+</audio>
+
+<!-- html2canvas for download -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="/Kalkidan.js"></script>
+</body>
+  </html>
