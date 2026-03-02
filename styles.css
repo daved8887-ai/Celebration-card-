@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Handwritten";
+  src: url("assets/handwritten.ttf");
+}
+
+:root {
+  --bg: #faf7f4;
+  --text: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.4s;
+}
+
+.card-wrapper {
+  width: min(92vw, 400px);
+}
+
+svg {
+  width: 100%;
+}
+
+/* Text */
+.title {
+  font-size: 26px;
+  fill: var(--text);
+}
+
+.name {
+  font-family: "Handwritten";
+  font-size: 34px;
+  fill: var(--text);
+  letter-spacing: 2px;
+}
+
+.message {
+  font-size: 15px;
+  fill: var(--text);
+}
+
+/* Name Reveal */
+.reveal {
+  stroke: white;
+  stroke-width: 1;
+  fill-opacity: 0;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw 2s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+/* Fireworks */
+.firework {
+  animation: explode 1.6s ease-out forwards;
+}
+
+@keyframes explode {
+  0% { r: 0; opacity: 1; }
+  100% { r: 40; opacity: 0; }
+}
+
+/* Controls */
+.controls {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.controls button,
+.controls select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
